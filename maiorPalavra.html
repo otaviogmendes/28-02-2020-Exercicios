@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maiorPalavra(str)
+{
+  var matriz = str.match(/\w[a-z]{0,}/gi);
+  var resultado = matriz[0];
+
+  for(var i = 1 ; i < matriz.length ; i++)
+  {
+    if(resultado.length < matriz[i].length)
+    {
+    resultado = matriz[i];
+    } 
+  }
+  return resultado;
+}
+alert(maiorPalavra('calabresa de itubaina com paralelepipedo'));
+
+    </script>
+</body>
+</html>
